@@ -1,0 +1,10 @@
+name: pullrequest
+on: pull_request
+jobs:
+  pullrequest:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    steps:
+    - uses: actions/checkout@master
